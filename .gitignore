@@ -1,10 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-packages/local-api/node_modules
-packages/local-api/dist
-packages/cli/node_modules
-packages/cli/dist
-packages/local-client/node_modules
-packages/local-client/build
+build
+dist
+node_modules
+
 .idea/
 .eslintcache
 /node_modules/
+lerna-debug.log
