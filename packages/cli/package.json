@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
-    "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\\"production\\\""
+    "build": "tsc",
+    "prepublishOnly": "esbuild src/index.ts --platform=node --target=node16.14 --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\\"production\\\""
   },
   "publishConfig": {
     "access": "public"

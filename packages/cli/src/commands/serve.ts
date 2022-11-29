@@ -35,6 +35,7 @@ export const serveCommand = new Command()
 				} else if (err instanceof Error) {
 					console.log("Here's the problem", err.message);
 				}
+				console.error(err);
 				process.exit(1);
 			}
 		});

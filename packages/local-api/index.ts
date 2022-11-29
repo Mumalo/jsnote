@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import {createProxyMiddleware} from "http-proxy-middleware";
 import { createCellsRouter } from "./src/routes/cells";
+// import * as l from "@jjsnote";
 
 export const serve = (
 		port: number,
@@ -20,9 +21,11 @@ export const serve = (
 		 }));
 	} else {
 		// does not work well with symbolic links
-		const packagePath = require.resolve('@jjsnote/local-client/build/index.html');
+		console.log('Production run....')
+		const packagePath = require.resolve(
+				'@jjsnote/local-client/build/index.html'
+		);
 		app.use(express.static(path.dirname(packagePath)));
-
 	}
 
 
