@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import {createProxyMiddleware} from "http-proxy-middleware";
 import { createCellsRouter } from "./src/routes/cells";
-// import * as l from "@jjsnote";
+// import '@jjsnote/local-client';
 
 export const serve = (
 		port: number,
